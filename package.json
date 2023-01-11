@@ -10,12 +10,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "jest": "^27.3.1"
-  },
+  "dependencies": {},
   "type": "module",
   "devDependencies": {
     "cross-env": "^7.0.3",
+    "jest": "^27.3.1",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.27.1",
     "eslint-plugin-react-hooks": "^4.3.0",
     "prettier": "^2.5.0"
