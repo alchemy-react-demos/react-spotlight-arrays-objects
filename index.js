@@ -3,7 +3,7 @@
 // OUTPUT: the value of the 'name' attribute i.e. Benny
 // REQS: use destructuring and the function should be a single line
 
-export const getName = ({ name }) => name
+export const getName = ({ name }) => name;
 
 // INPUT: an object with a nested "address" attribute such as
 //   {name: 'Bob Smith', address: {street: 'Main Street', number: 123, city: 'Anytown', country: 'USA}}
@@ -11,8 +11,8 @@ export const getName = ({ name }) => name
 // REQS: use destructuring and template literals
 
 export const printAddress = ({ name, address: { street, number, city, country } }) => {
-  return `${name} lives at ${number} ${street}, ${city}, ${country}`
-}
+  return `${name} lives at ${number} ${street}, ${city}, ${country}`;
+};
 
 // REFACTOR CHALLENGE
 // Refactor this function so that all values in the object are destructured
@@ -33,8 +33,8 @@ export const printUserInfo = ({
     Favorite Food: ${food},
     Pet Name: ${petName},
     Address: ${number} ${street}, ${city}, ${country}
-    `
-}
+    `;
+};
 
 // INPUT: an unknown number of input arguments, all numbers
 // OUTPUT: their sum
@@ -43,12 +43,12 @@ export const printUserInfo = ({
 //  getSum(1, 2, 3, 4, 5) === 15
 export const getSum = (...nums) => {
   // console.log('rest params', rest)
-  let total = 0
+  let total = 0;
   for (const num of nums) {
-    total += num
+    total += num;
   }
-  return total
-}
+  return total;
+};
 
 // INPUT: an unknown number of arguments
 // OUTPUT: an array with the first two arguments destructured and the remaining in a nested array
@@ -56,8 +56,8 @@ export const getSum = (...nums) => {
 // getFirstTwoArgs(1, 2, 3, 4, 5) should return [1, 2, [3, 4, 5]]
 // getFirstTwoArgs('a', 'b', 'c', 'd') should return ['a', 'b', ['c', 'd']]
 export const getFirstTwoArgs = (arg1, arg2, ...remainder) => {
-  return [arg1, arg2, remainder]
-}
+  return [arg1, arg2, remainder];
+};
 
 // INPUT: an object with the following structure
 // {
@@ -88,27 +88,27 @@ export const getFirstTwoArgs = (arg1, arg2, ...remainder) => {
 
 export const addSneakerCount = ({ shoes, ...rest }) => {
   // const shoeList = [...shoes]
-  rest.shoes = [...shoes]
-  rest.sneakerCount = shoes.length
-  return rest
-}
+  rest.shoes = [...shoes];
+  rest.sneakerCount = shoes.length;
+  return rest;
+};
 
 // INPUT: brands from data.js
 // OUTPUT: the brand names listed
 // REQS: use Object.keys to solve
 export const getBrandNames = (brands) => {
-  return Object.keys(brands)
-}
+  return Object.keys(brands);
+};
 
 // INPUT: brands from data.js
 // OUTPUT: total number of sneaker types across all brands (14)
 export const totalSneakerCount = (brands) => {
-  const sneakers = []
+  const sneakers = [];
   for (const brand of Object.keys(brands)) {
-    sneakers.push(...brands[brand].shoes)
+    sneakers.push(...brands[brand].shoes);
   }
-  return sneakers.length
-}
+  return sneakers.length;
+};
 
 // INPUT: An object
 // OUTPUT: An array with key value pairs converted to arrays
@@ -118,12 +118,12 @@ export const totalSneakerCount = (brands) => {
 // Source: https://edabit.com/challenge/pPNAs5PvB3WvnDwDM
 
 export const convertToArray = (obj) => {
-  const arr = []
+  const arr = [];
   for (const key of Object.keys(obj)) {
-    arr.push([key, obj[key]])
+    arr.push([key, obj[key]]);
   }
-  return arr
+  return arr;
   // return Object.entries(obj)
-}
+};
 
 //
